@@ -1,0 +1,121 @@
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+  <title>Bookmark</title>
+  <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="shortcut icon" href="imgs/bookmark.png" type="image/x-icon">
+
+   
+</head>
+
+<body >
+<div class=" d-flex justify-content-center align-items-center flex-column mt-5">
+  <h1 class=" head-site position-relative ">Bookmarker</h1>
+  <!-- input part -->
+  <div class="inpt pt-5 w-75 text-center">
+    <h2>
+      <i class="fa-solid fa-bookmark first-bookmark"></i>
+     Bookmark your favorite sites 
+      <i class="fa-solid fa-bookmark second-bookmark"></i>
+    </h2>
+    <div class="d-flex flex-column text-start ">
+          <label for="name" class=" pb-2">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name</label>
+          <input  type="text"  onkeyup="validName()" id="name" placeholder="Bookmark Name" class="ps-3 py-2 form-control ">
+          
+          <label for="url" class=" pb-2 pt-4">
+            <i class="fa-solid fa-link pe-2 "></i>
+            Site URL</label>
+          <input type="text" id="url" onkeyup="validUrl()" placeholder="Website URL" class="ps-3 py-2 form-control" >
+
+          <button  id="test" data-bs-target="#exampleModal"  class="btn m-auto btn-red px-5 my-5" onclick="addlink()" data-bs-toggle="modal" >Submit</button>
+        
+
+          <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade  " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content container">
+      <div class="modal-header border-0 pb-4 pt-5">
+        <!-- <h1 class="modal-title fs-5" id="exampleModalLabel"></h1> -->
+        <span class="rounded-circle bg-danger me-2 w-20"></span>
+        <span class="rounded-circle bg-warning me-2 w-20"></span>
+        <span class="rounded-circle bg-success me-2 w-20"></span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Site Name or Url is not valid, Please follow the rules below :</p>
+        <ol class="ps-0">
+          <li>
+            <i class="fa-regular fa-circle-right p-2">
+            </i>
+            Site name must contain at least 3 characters
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right p-2">
+            </i>
+            Site URL must be a valid one
+          </li>
+        </ol>
+      </div>
+     
+    </div>
+  </div>
+</div>
+     
+    </div>
+    <table  class="table  align-middle table-striped text-center table-bordered table-hover">
+      <thead>
+          <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+             
+          </tr>
+      </thead>
+      <tbody id="myRow">
+         
+           <!-- <tr>
+              <td>0</td>
+              <td  class="w-25"><img src="images/chef-2.jpg" class="w-25" alt=""></td>
+              <td>
+           <a href="http://www.defacto.com" target="_blank">
+            <button class="btn btn-green">
+              <i class="fa-solid fa-eye pe-1"></i>
+              Visit
+            </button>
+           </a>
+              </td>
+              <td><button onclick="deleteLink()" class="btn btn-danger">
+                <i class="fa-solid fa-trash-can pe-1"></i>
+                Delete</button></td>
+          </tr>  -->
+       
+      </tbody>
+  </table>
+  </div>
+
+</div>
+ 
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+
+</body>
+
+</html>
